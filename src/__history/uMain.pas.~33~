@@ -1,0 +1,65 @@
+ // delphi utiliza a programação baseada em pascal
+ //nome da classe ou componente principal
+unit uMain;
+ //daqui para baixo é a parte de programação
+
+interface
+ //use é as importanções ncessárias
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+ // criando uma classe ou um tipo
+type
+  TFormMain = class(TForm)
+    btn_salvar: TButton;
+    //metodos do tipo private só a propria classe tem acesso
+  private
+    { Private declarations }
+    //declaro variaveis  nomedavariavel depois o tipo
+    mauricio: string;
+    procedure Somar(a,b: string);
+
+    function Resultado: string;
+   //metodos public só é exibido quando é criado um objeto
+  public
+    { Public declarations }
+    //os metodos criados só terão acesso atráves de herança
+    protected
+    // destinado ao uso de componentes
+    published
+  end;
+  // var fora de qualquer contexto quer dizer que a variavel abaixo é global dentro do delphi todo
+var
+  FormMain: TFormMain;
+
+implementation
+
+{$R *.dfm}
+
+function TFormMain.Resultado: string;
+begin
+
+  if 1= 1 then
+    ShowMessage('Ola mundo')
+  else 
+  ShowMessage('Ops');
+  
+  while 1<>0 do
+  begin
+    
+  end;
+  i:int;
+  for I := 0 to 10 do
+  begin
+    
+  end;
+  
+end;
+
+procedure TFormMain.Somar(a, b: string);
+begin
+
+end;
+
+end.
